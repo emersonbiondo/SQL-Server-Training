@@ -1,0 +1,10 @@
+USE master;  
+
+GO
+
+CREATE DATABASE ProjectSQL;
+
+GO
+
+USE ProjectSQL;
+ALTER DATABASE ProjectSQL COLLATE SQL_Latin1_General_CP1_CI_AI;

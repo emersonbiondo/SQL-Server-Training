@@ -1,0 +1,20 @@
+USE [ProjectSQL]
+GO
+
+--CHANGE VALUE CHANGE THE VARIABLE TO THE FILE LOCATION
+DECLARE @fileLocation AS VARCHAR(MAX) = '..\Location.json';
+
+DECLARE @JSON NVARCHAR(MAX);
+
+DECLARE @SQL NVARCHAR(MAX);
+
+SET @SQL = N'SELECT @OUTPUT=BulkColumn FROM OPENROWSET (BULK ''' + @fileLocation + N''', SINGLE_CLOB) import;';
+
+exec sp_executesql @SQL, N'@OUTPUT NVARCHAR(MAX) out', @JSON out;
+
+INSERT INTO [Location] 
+	SELECT * FROM OPENJSON (@JSON) WITH
+		(
+			[Name] NVARCHAR(50),  
+			[Description] NVARCHAR(200)
+		);

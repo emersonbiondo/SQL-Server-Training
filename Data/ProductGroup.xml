@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProductGroups>
+  <ProductGroup>
+    <Name>Products Color</Name>
+    <Description>Description Color</Description>
+  </ProductGroup>
+  <ProductGroup>
+    <Name>Products Depth</Name>
+    <Description>Description Depth</Description>
+  </ProductGroup>
+  <ProductGroup>
+    <Name>Products Height</Name>
+    <Description>Description Height</Description>
+  </ProductGroup>
+  <ProductGroup>
+    <Name>Products Weight</Name>
+    <Description>Description Weight</Description>
+  </ProductGroup>
+  <ProductGroup>
+    <Name>Products Width</Name>
+    <Description>Description Width</Description>
+  </ProductGroup>
+</ProductGroups>

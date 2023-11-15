@@ -1,0 +1,21 @@
+USE [ProjectSQL];
+GO
+
+CREATE TABLE [UserGroup]
+	(
+		[Id] INT IDENTITY(1,1) NOT NULL,
+		[Name] NVARCHAR(50) NOT NULL,
+		[Description] NVARCHAR(200) NULL
+	);
+
+ALTER TABLE [UserGroup] 
+	ADD CONSTRAINT [PK_UserGroup] PRIMARY KEY CLUSTERED 
+	(
+		[Id]
+	);
+
+ALTER TABLE [UserGroup] 
+	ADD CONSTRAINT [IU_UserGroup] UNIQUE NONCLUSTERED 
+	(
+		[Name]
+	);
